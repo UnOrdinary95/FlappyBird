@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Do not ignore the Assets folder
+!Assets/
+!Assets/*.cs
+
+# Do not ignore README.md and .gitignore
+!README.md
+!.gitignore
