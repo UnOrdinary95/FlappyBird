@@ -8,6 +8,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
 
+    [Header("----- Volume -----")]
+    [Range(0f, 1f)]
+    [SerializeField] float musicVolume = 0.3f;
+    [Range(0f, 1f)]
+    [SerializeField] float sfxVolume = 0.5f;
+
     [Header("----- Audio Clip -----")]
     public AudioClip mainmenu;
     public AudioClip secondphase;
@@ -39,7 +45,7 @@ public class AudioManager : MonoBehaviour
     // Plays a sound effect once using the SFX AudioSource.
     public void PlaySFX(AudioClip clip)
     {
-        SFXSource.PlayOneShot(clip);
+        SFXSource.PlayOneShot(clip, sfxVolume);
     }
 
     // Plays background music. If the same clip is already playing, does nothing.
@@ -49,6 +55,7 @@ public class AudioManager : MonoBehaviour
         if (musicSource.clip == clip && musicSource.isPlaying) return;
 
         musicSource.clip = clip;
+        musicSource.volume = musicVolume;
         musicSource.Play();
     }
 
