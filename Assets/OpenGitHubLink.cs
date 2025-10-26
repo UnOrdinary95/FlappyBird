@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class OpenGitHubLink : MonoBehaviour
 {
-    public string url = "";
+    private string url = "https://github.com/UnOrdinary95/FlappyBird";
     private AudioManager audioManager;
 
     void Awake()
