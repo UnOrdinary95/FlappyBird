@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("----- Volume -----")]
     [Range(0f, 1f)]
-    [SerializeField] float musicVolume = 0.3f;
+    [SerializeField] float musicVolume = 0.5f;
     [Range(0f, 1f)]
     [SerializeField] float sfxVolume = 0.5f;
 
